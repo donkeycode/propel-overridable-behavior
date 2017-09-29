@@ -55,6 +55,6 @@ class OverridableBehavior extends Behavior
 
     public function getOverridableColumns()
     {
-        return explode(',', $this->getParameter('overridable_columns'));
+        return explode(',', str_replace(' ', '', $this->getParameter('overridable_columns')));
     }
 }
